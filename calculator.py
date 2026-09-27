@@ -36,6 +36,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+def divide(a, b):
+    """Return a divided by b, handling division by zero."""
+    if b == 0:
+        return "Error: Cannot divide by zero."
+    return a / b
 
 def add(a, b):
     """Return the sum of a and b."""
