@@ -50,7 +50,8 @@ def add(a, b):
 def subtract(a, b):
     """Return a minus b."""
     return a - b
-  
+
 def multiply(a, b):
     """Return a multiplied by b."""
     return a * b
+    
