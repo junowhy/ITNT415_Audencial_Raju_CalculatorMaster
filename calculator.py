@@ -1,0 +1,32 @@
+def display_menu():
+    print("\n===== Calculator Master =====")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+
+def get_numbers():
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            return num1, num2
+        except ValueError:
+            print("Invalid input. Please enter numeric values.")
+
+def main():
+    while True:
+        display_menu()
+        choice = input("Select an option (1-5): ")
+
+        if choice == "5":
+            print("Exiting Calculator Master. Goodbye!")
+            break
+        elif choice in ("1", "2", "3", "4"):
+            print("This operation is not yet implemented.")
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+if __name__ == "__main__":
+    main()
