@@ -1,3 +1,6 @@
+def add(a, b):
+    return a + b
+
 def display_menu():
     print("\n===== Calculator Master =====")
     print("1. Addition")
@@ -23,7 +26,10 @@ def main():
         if choice == "5":
             print("Exiting Calculator Master. Goodbye!")
             break
-        elif choice in ("1", "2", "3", "4"):
+        elif choice == "1":
+            num1, num2 = get_numbers()
+            print(f"Result: {add(num1, num2)}")
+        elif choice in ("2", "3", "4"):
             print("This operation is not yet implemented.")
         else:
             print("Invalid choice. Please select a valid option.")
