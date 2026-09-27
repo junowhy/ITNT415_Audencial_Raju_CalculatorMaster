@@ -1,6 +1,3 @@
-def add(a, b):
-    return a + b
-
 def display_menu():
     print("\n===== Calculator Master =====")
     print("1. Addition")
@@ -29,10 +26,26 @@ def main():
         elif choice == "1":
             num1, num2 = get_numbers()
             print(f"Result: {add(num1, num2)}")
-        elif choice in ("2", "3", "4"):
+        elif choice == "2":
+            num1, num2 = get_numbers()
+            print(f"Result: {subtract(num1, num2)}")
+        elif choice in ("3", "4"):
             print("This operation is not yet implemented.")
         else:
             print("Invalid choice. Please select a valid option.")
 
 if __name__ == "__main__":
     main()
+
+def add(a, b):
+    """Return the sum of a and b."""
+    return a + b
+
+def subtract(a, b):
+    """Return a minus b."""
+    return a - b
+
+def multiply(a, b):
+    """Return a multiplied by b."""
+    return a * b
+    
