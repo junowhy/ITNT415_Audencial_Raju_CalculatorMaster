@@ -1,3 +1,21 @@
+def add(a, b):
+    """Return the sum of a and b."""
+    return a + b
+
+def subtract(a, b):
+    """Return a minus b."""
+    return a - b
+
+def multiply(a, b):
+    """Return a multiplied by b."""
+    return a * b
+
+def divide(a, b):
+    """Return a divided by b, handling division by zero."""
+    if b == 0:
+        return "Error: Cannot divide by zero."
+    return a / b
+
 def display_menu():
     print("\n===== Calculator Master =====")
     print("1. Addition")
@@ -29,28 +47,15 @@ def main():
         elif choice == "2":
             num1, num2 = get_numbers()
             print(f"Result: {subtract(num1, num2)}")
-        elif choice in ("3", "4"):
-            print("This operation is not yet implemented.")
+        elif choice == "3":
+            num1, num2 = get_numbers()
+            print(f"Result: {multiply(num1, num2)}")
+        elif choice == "4":
+            num1, num2 = get_numbers()
+            result = divide(num1, num2)
+            print(f"Result: {result}")
         else:
             print("Invalid choice. Please select a valid option.")
 
 if __name__ == "__main__":
     main()
-    
-def divide(a, b):
-    """Return a divided by b, handling division by zero."""
-    if b == 0:
-        return "Error: Cannot divide by zero."
-    return a / b
-
-def add(a, b):
-    """Return the sum of a and b."""
-    return a + b
-
-def subtract(a, b):
-    """Return a minus b."""
-    return a - b
-  
-def multiply(a, b):
-    """Return a multiplied by b."""
-    return a * b
